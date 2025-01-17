@@ -1,0 +1,220 @@
+/* General Body Styling */
+body {
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  font-family: 'Roboto', Arial, sans-serif; /* Clean and modern sans-serif font */
+  background: linear-gradient(to bottom, #adadad, #b9b9b9e5); /* Neutral gradient for a polished look */
+  color: #29353C; /* Dark slate gray for text for good readability */
+  line-height: 1.6; /* Comfortable text spacing */
+  height: 100vh; /* Ensure the body covers the full viewport height */
+  overflow-x: hidden; /* Prevent horizontal scrolling caused by elements extending beyond the viewport */
+}
+
+/* Main Container */
+.container {
+  max-width: 700px; /* Limit container width for a clean layout */
+  margin: 50px auto; /* Center the container on the page */
+  padding: 30px 20px; /* Add inner spacing */
+  text-align: center; /* Center text and content within the container */
+  background: #ececec; /* Light gray background for contrast */
+  border-radius: 15px; /* Smooth rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Search Form */
+form {
+  display: flex; /* Align children horizontally */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center the form content */
+  margin: 20px auto; /* Add spacing around the form */
+  max-width: 600px; /* Limit form width */
+  height: 50px; /* Fixed height for consistent styling */
+  background: #eaf2ff; /* Light pastel blue background for a soft look */
+  border-radius: 25px; /* Fully rounded edges for a pill shape */
+  overflow: hidden; /* Ensure content does not spill outside */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for dimension */
+}
+
+input[type="search"] {
+  flex: 1; /* Allow the input to take up remaining space */
+  padding: 12px 20px; /* Comfortable padding for text */
+  border: none; /* Remove default border */
+  font-size: 16px; /* Standard font size for readability */
+  outline: none; /* Remove default focus outline */
+  background: none; /* Transparent background for simplicity */
+  color: #29353C; /* Dark gray for clear input text */
+}
+
+input[type="search"]::placeholder {
+  color: #768A96; /* Subtle gray for placeholder text */
+}
+
+/* Search Icon */
+.search-style {
+  display: flex; /* Center the icon */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  width: 50px; /* Fixed width */
+  height: 50px; /* Fixed height to match the search bar */
+  background: #bdd1da; /* Sky blue for visual appeal */
+  color: #ffffff; /* White icon for contrast */
+  cursor: pointer; /* Pointer cursor to indicate interactivity */
+  border-radius: 50%; /* Circular shape */
+  transition: background 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+  font-size: 18px; /* Ensure icon is clearly visible */
+}
+
+.search-style::before {
+  content: '\1F50D'; /* Unicode for magnifying glass icon */
+  font-size: 24px; /* Adjust size of the icon */
+  color: #ffffff; /* Icon color */
+}
+
+.search-style:hover {
+  background: #6495ED; /* Change background to Cornflower blue on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover for feedback */
+}
+
+/* Weather Image Screen */
+#weatherImageScreen {
+  position: relative; /* Enable positioning of overlay elements */
+  width: 100%; /* Full width of the container */
+  height: 300px; /* Fixed height for the image area */
+  overflow: hidden; /* Ensure image stays within the boundaries */
+  margin-bottom: 20px; /* Space below the section */
+  background: #93bdff; /* Light blue fallback color */
+  border-radius: 15px; /* Rounded corners */
+}
+
+#weatherOutsideImage {
+  width: 100%; /* Stretch the image to fill the width */
+  height: 100%; /* Stretch the image to fill the height */
+  object-fit: cover; /* Maintain aspect ratio while covering the area */
+  filter: brightness(70%); /* Darken the image for better overlay contrast */
+  opacity: 1; /* Ensure image is fully visible */
+}
+
+/* Overlay */
+#weatherOverlay {
+  position: absolute; /* Position on top of the image */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust to exact center */
+  text-align: center; /* Center text within the overlay */
+  color: #FFFFFF; /* White text for readability */
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5); /* Strong shadow for text clarity */
+}
+
+#overlayTemperature {
+  font-size: 64px; /* Large font for emphasis */
+  font-weight: 700; /* Bold font for visibility */
+  margin: 0; /* Remove default margins */
+}
+
+#overlayLocation {
+  font-size: 24px; /* Medium font size for location name */
+  margin: 5px 0; /* Add slight spacing */
+  color: #e0e0e0; /* Off-white for subtle contrast */
+}
+
+#overlayCondition {
+  font-size: 16px; /* Smaller font for weather condition */
+  margin: 5px 0; /* Add slight spacing */
+  color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+}
+
+/* Weather Details Container */
+#weatherDetailsContainer {
+  display: flex; /* Horizontal layout for details */
+  gap: 15px; /* Space between detail boxes */
+  overflow-x: auto; /* Enable horizontal scrolling for overflow */
+  padding: 10px 0; /* Vertical padding */
+  scrollbar-width: thin; /* Narrow scrollbar for modern look */
+  scrollbar-color: #87CEEB #D3E4FF; /* Custom scrollbar colors */
+}
+
+#weatherDetailsContainer::-webkit-scrollbar {
+  height: 6px; /* Thin scrollbar */
+}
+
+#weatherDetailsContainer::-webkit-scrollbar-thumb {
+  background: #87CEEB; /* Sky blue for scrollbar thumb */
+  border-radius: 4px; /* Rounded ends for thumb */
+}
+
+#weatherDetailsContainer::-webkit-scrollbar-track {
+  background: #D3E4FF; /* Light pastel blue for scrollbar track */
+}
+
+/* Individual Weather Box */
+.weatherBox {
+  flex: 0 0 140px; /* Fixed width for boxes */
+  background: #ffffff; /* White background for clarity */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center text inside the box */
+  padding: 10px; /* Inner spacing */
+  font-size: 14px; /* Standard font size */
+  color: #29353C; /* Slate gray for text */
+}
+
+.weatherBox:hover {
+  transform: translateY(-5px); /* Subtle upward movement */
+  background: #D3E4FF; /* Light pastel blue on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+}
+
+.weatherBox p {
+  margin: 1px 0; /* Minimal spacing */
+  font-weight: 1000; /* Bold labels */
+  color: #34bbf1bd; /* Sky blue for emphasis */
+  font-size: 20px; /* Large font for labels */
+}
+
+.weatherBox span {
+  font-size: 18px; /* Large font for values */
+  font-weight: 700; /* Bold for clarity */
+  color: #29353C; /* Dark gray for text */
+}
+
+/* Dynamic Background Styles */
+body.clear {
+  background: linear-gradient(to bottom, #87CEFA, #ffffff); /* Clear sky gradient */
+}
+
+body.clouds {
+  background: linear-gradient(to bottom, #b0c4de, #d3d3d3); /* Cloudy sky gradient */
+}
+
+body.rain {
+  background: linear-gradient(to bottom, #708090, #2f4f4f); /* Rainy sky gradient */
+}
+
+body.snow {
+  background: linear-gradient(to bottom, #ffffff, #ccccccef); /* Snowy sky gradient */
+}
+
+body.thunderstorm {
+  background: linear-gradient(to bottom, #4b4b4b, #000000); /* Stormy sky gradient */
+}
+
+body.mist,
+body.haze,
+body.fog {
+  background: linear-gradient(to bottom, #d3d3d3, #b0b0b0); /* Misty or foggy gradient */
+}
+
+/* Spinner for Loading State */
+#spinner {
+  display: none; /* Hidden by default */
+  position: absolute; /* Center spinner in the viewport */
+  top: 50%; /* Vertical center */
+  left: 50%; /* Horizontal center */
+  transform: translate(-50%, -50%); /* Adjust to exact center */
+  font-size: 18px; /* Standard font size for text */
+  color: #29353C; /* Slate gray text color */
+}
+
+#spinner.active {
+  display: block; /* Show spinner when active */
+}

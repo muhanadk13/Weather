@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Search Bar Section -->
+        <form id="weatherForm">
+            <!-- Input for searching city -->
+            <input type="search" id="searchLocation" autofocus required placeholder="Enter city">
+            <!-- Search icon styled separately -->
+            <span class="search-style" id="searchIcon"></span>
+        </form>
+
+        <!-- Weather Image Section with Overlay -->
+        <div id="weatherImageScreen">
+            <img id="weatherOutsideImage" src="">
+            <div id="weatherOverlay">
+                <!-- Overlay information -->
+                <p id="overlayTemperature">Temperature</p>
+                <h2 id="overlayLocation">City, Country</h2>
+                <p id="overlayCondition">Condition</p>
+            </div>
+        </div>
+
+        <!-- Weather Details Section -->
+        <div id="weatherDetailsContainer">
+            <!-- Individual weather detail boxes -->
+            <div class="weatherBox">
+                <p>High</p>
+                <span id="highTemp"></span>
+            </div>
+            <div class="weatherBox">
+                <p>Low</p>
+                <span id="lowTemp"></span>
+            </div>
+            <div class="weatherBox">
+                <p>Feels Like</p>
+                <span id="feelsLike"></span>
+            </div>
+            <div class="weatherBox">
+                <p>Humidity</p>
+                <span id="humidity"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
