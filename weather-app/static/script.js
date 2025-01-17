@@ -55,33 +55,33 @@ function updateUI(data) {
   let imageUrl = '';
   switch (mainCondition) {
     case 'clear':
-      imageUrl = 'images-2.0/clear.jpg';
+      imageUrl = 'images/clear.jpg';
       document.body.style.background = 'linear-gradient(to bottom, #87CEFA, #ffffff)';
       break;
     case 'clouds':
-      imageUrl = 'images-2.0/cloud.jpg';
+      imageUrl = 'images/cloud.jpg';
       document.body.style.background = 'linear-gradient(to bottom, #b0c4de, #d3d3d3)';
       break;
     case 'rain':
-      imageUrl = 'images-2.0/rain.avif';
+      imageUrl = 'images/rain.avif';
       document.body.style.background = 'linear-gradient(to bottom, #708090, #2f4f4f)';
       break;
     case 'snow':
-      imageUrl = 'images-2.0/snow.jpg';
+      imageUrl = 'images/snow.jpg';
       document.body.style.background = 'linear-gradient(to bottom, #ffffff, #d9d9d9)';
       break;
     case 'thunderstorm':
-      imageUrl = 'images-2.0/thunder.avif';
+      imageUrl = 'images/thunder.avif';
       document.body.style.background = 'linear-gradient(to bottom, #4b4b4b, #000000)';
       break;
     case 'mist':
     case 'haze':
     case 'fog':
-      imageUrl = 'images-2.0/mist.jpg';
+      imageUrl = 'images/mist.jpg';
       document.body.style.background = 'linear-gradient(to bottom, #d3d3d3, #b0b0b0)';
       break;
     default:
-      imageUrl = 'images-2.0/default.jpg';
+      imageUrl = 'images/default.jpg';
       document.body.style.background = 'linear-gradient(to bottom, #ececec, #ffffff)';
   }
 

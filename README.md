@@ -51,13 +51,15 @@ Open the index.html file in your browser to view the app, or use Live Server in 
 Project Structure
 
 weather-app-kata/
-├── server.py           # Flask backend
-├── static/
-    ├── images-2.0      # Contains images 
-│   ├── index.html      # Frontend HTML
-│   ├── style.css       # Frontend CSS
-│   ├── script.js       # Frontend JavaScript
-└── README.md           # Project documentation
+├── weather-app/
+│   ├── static/
+│   │   ├── images/         # Consolidated image folder
+│   │   ├── index.html      # Frontend HTML
+│   │   ├── style.css       # Frontend CSS
+│   │   ├── script.js       # Frontend JavaScript
+│   ├── server.py           # Flask backend
+├── README.md               # Project documentation
+
 
 Usage
 Enter a city name in the search bar.
